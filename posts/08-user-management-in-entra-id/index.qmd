@@ -1,0 +1,53 @@
+---
+title: "User Management In Entra ID"
+date: 2025-08-18
+categories: 
+  - "azure"
+  - "iam"
+  - "projects"
+  - "security"
+---
+
+I've been learning Azure for a while and decided that I wanted to focus my attention on Entra ID. Entra ID is a cloud-based identity and access management service used to access external resources. Resources included the Azure portal and Microsoft 365. The first thing I explored in the platform was creating and managing users in Entra ID.
+
+Why would creating users be important? Let's say a company is hiring 60 new employees across different departments. User accounts need to be created for all the new hires, ensuring that each user gets appropriate access to applications and resources based on their role.
+
+1\. Create a New User
+
+I created a user in the Microsoft Entra Admin Center making sure that I set the User Type to Member and Usage Location as the US. Using an Incognito window, I then logged to the admin center as my new user to set up multi-factor authentication.
+
+![](https://daniellelabs.com/wp-content/uploads/2025/08/Task1-2.png)
+
+![](https://daniellelabs.com/wp-content/uploads/2025/08/Subtask1.png)
+
+2\. Add a License to the User
+
+To add a license to my new user, I selected Billing > Licenses in the Microsoft 365 admin center. For this lab, I added the Office 365 E5 (no Teams) license to my user.
+
+![](https://daniellelabs.com/wp-content/uploads/2025/08/Task2-2-1024x486.png)
+
+![](https://daniellelabs.com/wp-content/uploads/2025/08/Task2-1-2.png)
+
+3\. Invite an External User to My Tenant
+
+Back at the Microsoft Entra admin center, I added an external user to my tenant. The external user may be a contractor or vendor and they need access to specific project files or applications.
+
+![](https://daniellelabs.com/wp-content/uploads/2025/08/Task3-1.png)
+
+4\. Assign a Role to a User
+
+I assigned the user the Attribute Definition Reader and Attribute Log Reader roles.
+
+![](https://daniellelabs.com/wp-content/uploads/2025/08/Task4.png)
+
+![](https://daniellelabs.com/wp-content/uploads/2025/08/Subtask4.png)
+
+5\. Bulk Import Users
+
+I used two methods of importing bulk users into Entra ID. The first method involves selecting Bulk operations >Bulk create, then uploading and saving a CSV file with the names, emails, and temporary passwords of my new users. The second method uses Powershell Graph to create a [script](https://github.com/danielle-b/Creating-Bulk-Users-In-Entra-ID/blob/main/create_bulk_users.ps1) that adds users to Entra ID from a CSV file. This is helpful when there are dozens of new employees who are starting at the same time.
+
+![](https://daniellelabs.com/wp-content/uploads/2025/08/Task5.png)
+
+![](https://daniellelabs.com/wp-content/uploads/2025/08/Task5-1-1024x581.png)
+
+This was an great first step into learning Entra ID. I was excited learn a bit of Powershell Graph to automate adding my users. I do plan on doing more Entra ID labs and diving deeper into its features!
