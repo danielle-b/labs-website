@@ -1,0 +1,45 @@
+---
+title: "More IAM Fundamentals"
+date: 2025-03-26
+categories: 
+  - "iam"
+---
+
+I found another IAM course on Udemy. This course called [Foundations of Identity Access Management](https://www.udemy.com/course/foundations-of-identity-access-management/), covered much of the same topics the previous course covered. However, it goes into more detail and introduced topics not mentioned in the previously. Having said that, I thought I'd share more of what I learned in IAM through this course.
+
+### **Privileged Access Management**
+
+Privileged accounts have higher access rights than regular user accounts, enabling critical system management tasks like accessing sensitive data, configuring software, and managing security settings. However, this elevated access also makes them prime targets for attackers. If compromised, they can grant unauthorized access, disrupt services, or spread malware.
+
+Privileged Access Management, or PAM, is a security strategy and framework designed to control, monitor, and secure these accounts by implementing strict controls over access. Effective Privileged Access Management include:
+
+- **Principle of Least Privilege**: Users are assigned the minimum permissions necessary for their job.
+- **Separation of Duties**: No single individual should have control over critical systems, processes, or data.
+- **Multi-Factor Authentication(MFA)**: MFA adds an extra layer of security before accessing privileged accounts.
+- **Monitoring & Logging**: User activities should be logged and monitored for auditing and compliance.
+- **Role-Based Access Control(RBAC)**: Permissions are assigned based on one's job role, preventing excessive permissions.
+
+### **Federation**
+
+Federation allows users to access multiple systems or applications across different organizations using a single authentication process. Instead of creating separate credentials for each system, users are authenticated through a trusted identity provider, which then provides access to various services. A common example of this is Spotify's log in page shown below. As you can see, in addition to the email/username and password fields, users have the option to use either their Google, Facebook, or Apple credentials to log in to their Spotify accounts. For example, when a user logs in to their Spotify account using Google, Spotify redirects them to Google where they will enter their Google credentials. Google authenticates the user and sends a secure token to Spotify. Spotify verifies the token and grants them access to their platform.
+
+![An example of federation with Spotify.](images/spotify(2).png)
+
+The benefits of federation include the following:
+
+- **Single Sign-On**: Entering one's credentials gains them access to multiple systems.
+- **Enhanced Security**: Fewer passwords reduces the risk of password theft.
+- **Convenience**: Users gain faster access to multiple applications using a trusted login.
+
+### **IAM Protocols**
+
+IAM protocols help manage authentication, authorization, and access control in IT environments. Some key protocols discussed in the course were:
+
+- **Security Assertion Markup Language (SAML)**: an XML-based protocol enabling Single Sign-On (SSO) by exchanging authentication and authorization data between identity and service providers.
+- **Open Authentication (OAuth 2.0)**: grants third-party apps limited access to user data without exposing credentials, commonly used for API access.
+- **OpenID Connect (OIDC)**: extends OAuth to verify user identity and provide authentication.
+- **Lightweight Directory Access Protocol (LDAP)**: facilitates directory-based authentication and authorization and is essential for Active Directory. Active Directory is a directory service used to store information about users, objects and devices within an organization's network.
+- **Kerberos**: provides secure authentication within networks using a ticket-based system to authenticate users without transmitting passwords over a network.
+
+This course allowed me to gain an even deeper understanding of IAM fundamentals, and I especially enjoyed learning about federation and the different IAM protocols. I'm looking forward to applying my newfound knowledge as I build out my portfolio.
+

@@ -1,0 +1,20 @@
+project:
+  type: website
+
+website:
+  title: "Danielle Labs"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/danielle-b
+      - icon: linkedin
+        href: https://www.linkedin.com/in/daniellebrantley/
+        
+format:
+  html:
+    theme: minty
+    css: styles.css
+
+
+

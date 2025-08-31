@@ -1,0 +1,34 @@
+---
+title: "My Experience with the Azure Fundamentals AZ-900 Exam"
+date: 2025-04-22
+categories: 
+  - "azure"
+---
+
+It's been a bit quiet on my blog, but I've kept busy!
+
+I spent everyday from mid-March to the beginning of April preparing for the Azure Fundamentals AZ-900 exam. After taking the exam on April 11th, I am happy to share that I passed the exam! With that, I thought I'd share the resources I used for the exam.
+
+[Microsoft Virtual Training Days](https://events.microsoft.com/en-us/mvtd?language=English)
+
+Microsoft's Azure Virtual Training Day was my introduction to the basics of cloud computing in Azure. After attending the free two-day session, I received a 50% off voucher for the exam.
+
+[Microsoft Learn](https://learn.microsoft.com/en-us/training/courses/az-900t00)
+
+The AZ-900 course on Microsoft Learn took me through each exam objective, where I was quizzed along the way and completed lab exercises to reinforce my understanding of the material.
+
+[AZ-900 Exam Cram](https://www.youtube.com/watch?v=8n-kWJetQRk&t=8884s)
+
+I must have watched this video 5-6 times! This AZ-900 exam cram by Pete Zerger was a huge help to me in understanding cloud computing concepts and the services Azure offers. In addition to the video, I downloaded his PDF presentation, where I took additional notes and completed his practice exam.
+
+[Tutorials Dojo](https://portal.tutorialsdojo.com/practice-exam-ebook-bundle/)
+
+I purchased a study guide and practice exams from Tutorials Dojo and these were worth the money. The study guide highlights many of Azure services helped me to understand concepts that I didn't quite grasp using other resources. The practice exams were great as it prepared me the types of questions I would see on the exam.
+
+**Takeaways** 
+
+Overall, my experience with the Azure Fundamentals AZ-900 exam was great! What I found is that carving out a chuck of time everyday to prepare for the exam helped to solidify concepts in my head. Those moments, whether it be an hour or even thirty minutes really made a difference in my learning. It was amazing to see my progress as it got closer to the exam date.
+
+This is just one of a few Azure certification exams I'm looking to obtain and I look forward to taking the others in the future.
+
+

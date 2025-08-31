@@ -1,0 +1,49 @@
+---
+title: "Learning IAM Fundamentals"
+date: 2025-03-17
+categories: 
+  - "iam"
+---
+
+I first learned about Identity and Access Management (IAM) while exploring AWS. The AWS documentation provided insights into what IAM is and why it is used. Further exploration of AWS' IAM service involved creating users, assigning various permissions, and adding policies for each individual. This experience sparked a growing curiosity that continues to expand.
+
+<!--more-->
+
+While browsing Reddit, I came across a link to a Udemy course called [_Identity and Access Management (IAM): Vendor Neutral Course_](https://www.udemy.com/course/iam-identity-access-management-a-vendor-neutral-course/) by Ahmed Abdelghafar and decided to purchase it during a sale. Although the course is short (~2 hours), it offers a wealth of knowledge. Some of the concepts discussed were familiar to me. Topics like Mulit-Factor Authentication, Single Sign-On(SSO), and Zero Trust to name a few were great to review and I even gained a better understanding of those concepts. However, several concepts were entirely new to me. I decided to create a post describing a few key concepts I learned during this course.
+
+### **Identity Lifecycle Management**
+
+Identity Lifecycle Management oversees the processes that manage the entire user identity lifecycle within an organization. It consists of handling joiners, movers, and leavers to ensure that access is correctly granted, adjusted, or removed as needed. Joiners refer to newly hired employees, movers refer to individuals who have either received a promotion or changed departments, and leavers refer to those who have resigned or are otherwise no longer with the organization. It is crucial for access rights to align with users' job roles, ensuring they have only the necessary permissions—nothing more. This concept is known as the Principle of Least Privilege. Implementing this principle minimizes the attack surface and prevents the abuse of privileges.
+
+### **Access Control Types**
+
+The course discussed two main types of access control:
+
+- RBAC (Role-Based Access Control): Access is assigned based on the user's role.
+- ABAC (Attribute-Based Access Control): Access is assigned based on user attributes (e.g., location, employment type).
+
+Other access control types include:
+
+- PBAC (Policy-Based Access Control): Access is based on predefined policies.
+- DAC (Discretionary Access Control): Allows resource owners to determine and manage access to their data.
+- MAC (Mandatory Access Control): A security model that determines access to resources based on security labels and clearance levels.
+
+Access control mechanisms help protect sensitive information, ensure regulatory compliance, and minimize insider threats.
+
+### **Compliance** 
+
+During this section of the course, I realized that I was more familiar with compliance than I initially thought. I follow many cybersecurity professionals on social media, so much of the terminology and many of the frameworks discussed in the course were already familiar to me.
+
+GRC (Governance, Risk, and Compliance) is a term I frequently encounter. Governance involves defining and enforcing policies to control access to data and other resources within an organization. Risk refers to the potential for harm or loss due to cyberattacks or data breaches. Compliance entails adhering to laws, standards, and regulations to safeguard sensitive data and other digital assets from threats. Compliance also includes auditing, reporting, and continuous monitoring to detect potential violations.
+
+The course covered several compliance frameworks:
+
+- NIST (National Institute of Standards and Technology): A US framework providing security guidelines for federal agencies and serves as a baseline for other industries.
+- PCI-DSS(Payment Card Industry Data Security Standard): A set of policies for ensuring the secure handling credit card data, including access controls and data protection practices.
+- HIPAA(Health Insurance Portability and Accountability Act): A US law requiring health care organizations to protect patient data with specific guidelines on access control and data privacy.
+- GDPR(General Data Protection Regulation): a European Union regulation focused on data privacy and protection with guidelines on who can access personal data, where it's stored and how it's processed.
+
+When I initially thought of compliance frameworks, the first one that came to mind was a financial regulation I learned about in a business law course in college. Although it was not mentioned in the course, SOX (Sarbanes-Oxley Act) is something I have seen referenced in job descriptions. SOX is a federal law that establishes requirements for financial record-keeping and reporting in corporations. It was enacted to protect investors from fraudulent financial reporting by corporations. This law was implemented following several widely reported financial scandals, most notably the Enron scandal.
+
+Overall, completing this course strengthened my confidence in foundational IAM concepts. Although this course doesn't everything every concept or tool, I think it serves as a excellent starting point for further exploration into Identity and Access Management.
+

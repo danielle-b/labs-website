@@ -1,0 +1,23 @@
+---
+title: "About"
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/daniellebrantley/
+    - icon: github
+      text: Github
+      href: https://github.com/danielle-b
+
+---
+
+“One of the greatest discoveries a man makes, one of his great surprises, is to find he can do what he was afraid he couldn’t do.”— Henry Ford
+
+Welcome!
+
+After years of being a data analyst, I’ve decided to pivot and focus on Identity and Access Management. Danielle Labs is a space where I’ll share what I’m learning and give you insight into my skills. So here’s to learning and growing every day!
+
+In my free time, I’m listening to 90s Hip Hop and R&B, obsessing over podcasts or watching hair and makeup tutorials on YouTube. I’m also trying to keep with the latest trends in media.
+
+Take some time to explore the blog, read something interesting, and feel free to reach out.
