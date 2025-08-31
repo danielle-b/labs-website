@@ -44,7 +44,7 @@ I assigned the user the Attribute Definition Reader and Attribute Log Reader rol
 
 5\. Bulk Import Users
 
-I used two methods of importing bulk users into Entra ID. The first method involves selecting Bulk operations >Bulk create, then uploading and saving a CSV file with the names, emails, and temporary passwords of my new users. The second method uses Powershell Graph to create a [script](https://github.com/danielle-b/Creating-Bulk-Users-In-Entra-ID/blob/main/create_bulk_users.ps1) that adds users to Entra ID from a CSV file. This is helpful when there are dozens of new employees who are starting at the same time.
+I used two methods of importing bulk users into Entra ID. The first method involves selecting Bulk operations > Bulk create, then uploading and saving a CSV file with the names, emails, and temporary passwords of my new users. The second method uses Powershell Graph to create a [script](https://github.com/danielle-b/Creating-Bulk-Users-In-Entra-ID/blob/main/create_bulk_users.ps1) that adds users to Entra ID from a CSV file. This is helpful when there are dozens of new employees who are starting at the same time.
 
 ![](images/Task5.png)
 
