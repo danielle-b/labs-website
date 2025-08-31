@@ -24,7 +24,7 @@ I created a user in the Microsoft Entra Admin Center making sure that I set the 
 
 To add a license to my new user, I selected Billing > Licenses in the Microsoft 365 admin center. For this lab, I added the Office 365 E5 (no Teams) license to my user.
 
-![](images/Task2-2-1024x486.png)
+![](images/Task2-2.png)
 
 ![](images/Task2-1-2.png)
 
@@ -48,6 +48,6 @@ I used two methods of importing bulk users into Entra ID. The first method invol
 
 ![](images/Task5.png)
 
-![](images/Task5-1-1024x581.png)
+![](images/Task5-1.png)
 
 This was an great first step into learning Entra ID. I was excited learn a bit of Powershell Graph to automate adding my users. I do plan on doing more Entra ID labs and diving deeper into its features!

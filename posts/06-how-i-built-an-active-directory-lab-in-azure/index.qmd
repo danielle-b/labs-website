@@ -31,7 +31,7 @@ Step 3: Deploy Virtual Machines for Domain Controllers
 
 Next, I set up two virtual machines with the Windows Server 2019 image that will serve as my domain controllers. A domain controller is a server that responds to authentication requests from users and computers. These domain controllers will host Active Directory and its services. I launched the virtual machines in an availability set to ensure high availability and a lower risk of a single point of failure. I also changed the default size of the VMs to Standard B1ms to optimize cost.
 
-![](images/virtual_machine-300x81.png)
+![](images/virtual_machine.png)
 
 ![Created virtual network in Azure](images/virtual_machine_1.png)
 
