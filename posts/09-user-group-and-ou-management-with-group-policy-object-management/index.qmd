@@ -1,0 +1,136 @@
+---
+title: "User, Group, and OU Management with Group Policy Object Management"
+date: 2025-08-29
+draft: true
+categories: 
+  - "active-directory"
+  - "azure"
+  - "iam"
+  - "projects"
+  - "security"
+---
+
+This is part 2 of my Active Directory series. In this post, I am focusing on creating users, groups, organizational units(OUs), and group policy objects(GPOs).
+
+The goals for this project were the following:
+
+- Organize users and groups for effective policy management and simplified administration.
+
+- Create and manage user accounts that reflect actual employee roles
+
+- Establish groups for resource sharing and streamlining permissions
+
+- Craft group policy objects to enforce security rules, user restrictions, and system behavior across the domain.
+
+1. Structuring OUs  
+    An OU in Active Directory acts like a container, organizing and managing user accounts, groups, computers, and other objects. Below is the structure I used to create the OUs. The structure of OUs matter because a logical and meaningful structure makes delegation of permissions easier and it is easier for me to target my GPOs to the appropriate users or groups.
+
+```
+NY
+  - Computers
+  - Servers
+  - Users
+      - NY_Accounting
+      - NY_HR
+      - NY_IT
+      - NY_Management
+      - NY_Sales
+ATX
+  - Computers
+  - Servers
+  - Users
+      - ATX_Accounting
+      - ATX_HR
+      - ATX_IT
+      - ATX_Management
+      - ATX_Sales 
+LA
+  - Computers
+  - Servers
+  - Users
+      - LA_Accounting
+      - LA_HR
+      - LA_IT
+      - LA_Management
+      - LA_Sales
+```
+
+![](images/create_ous.png)
+
+![](images/creation_la_ou.png)
+
+![](images/creation_ous.png)
+
+2\. Creating Groups
+
+In my Users OUs, I created groups representing the different departments of a company. Each group name must be unique, hence the naming convention "LA\_Sales" shown below.
+
+In the screen where I create my groups, there is a section called group scope and a section called group type.
+
+Group scope defines how and where a group can be used in the domain or forest. There are three types of group scopes:
+
+- **Domain local**: Can assign permissions to resources within the same domain only. It can include members from any domain and is great for granting access to local resources like folders and printers.
+
+- **Global**: Can assign permissions across domains within the forest and can only contain members from the same domain. This is ideal for organizing users by roles or departments.
+
+- **Universal**: Can assign permissions anywhere in the forest and can contain members from any domain. A typical use case for this are organizations with users and resources spread across multiple domains.
+
+There are two group types:
+
+- **Security Groups**: Used to assign permissions to resources.
+
+- **Distribution Groups**: Used for email distribution. Ideal for sending emails to multiple users at once.
+
+For this project, I chose global as the group scope and security as the group type.
+
+![](images/new_la_group.png)
+
+![](images/creation_la_sales_group.png)
+
+3\. Import Users Into Active Directory
+
+I created a CSV file containing the name of the employees and used a PowerShell script to import them into Active Directory. In the LA >Users OU, you see the list of employees in the Los Angeles Office along with the groups I created earlier. Checking the properties of the LA\_Sales group, the list of Los Angeles sales employees are listed here.
+
+![](images/create_users.png)
+
+4\. Create GPOs and link them to OUs.
+
+What is a Group Policy Object(GPO)? A GPO is a collection of settings that control how computers and users behave in a Windows environment. They can be linked to domains and OUs.
+
+There are two types of Group Policy settings: computer configuration and user configuration. Computer configuration apply policies to the computer itself. User configuration applies policies to the users.
+
+There are two ways to configure the GPO settings: policies and preferences. Policies cannot be changed by the user and are typically used for security and system-wide configurations such as password policies. Preferences can be changed by the user and are typically used for user experience and environment settings like mapping network drives.
+
+For this lab I'm going to implement three GPOs:
+
+- Password Policy
+
+- Map Network Drives
+
+- Restrict Control Panel
+
+First, I tacked password policy. I set the password length to a minimum of 14 characters, enabled password complexity and set the maximum password age to 90 days.
+
+![](images/password_policy-2.png)
+
+I then mapped a network drive for users when they log in. This way users can access and mange shared files and resources across the network.
+
+![](images/mapped_drive-1024x470.png)
+
+I prohibited access to Control Panel to keep users from modifying any settings that would cause network and security issues.
+
+![](images/restrict_control_panel-1024x947.png)
+
+After creating the GPOs, I linked the them to the OUs. In the picture, I show the created GPOs linked to the appropriate OUs inside of my LA OU.
+
+![](images/link_gpo_to_ou.png)
+
+Remember the client machine I created in the last post? This will be moved to the LA> Computers OU. This is an important step because I have to use the client machine to test if my GPOs have been applied correctly.
+
+![](images/move_client_machine_to_ou.png)
+
+5\. Test Result on Client Machine
+
+![](images/applied_gpos.png)
+
+Despite the screenshot show, I'm running into an issue where my Computers GPO has been applied but my Users GPOs has not applied. I am currently troubleshooting the issue. I will update this post when there has been a fix.

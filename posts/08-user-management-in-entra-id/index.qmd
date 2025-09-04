@@ -10,7 +10,9 @@ categories:
 
 I've been learning Azure for a while and decided that I wanted to focus my attention on Entra ID. Entra ID is a cloud-based identity and access management service used to access external resources. Resources included the Azure portal and Microsoft 365. The first thing I explored in the platform was creating and managing users in Entra ID.
 
-Why would creating users be important? Let's say a company is hiring 60 new employees across different departments. User accounts need to be created for all the new hires, ensuring that each user gets appropriate access to applications and resources based on their role.
+Why would creating users be important? Let's say a company is hiring a few new employees across different departments. User accounts need to be created for all the new hires, ensuring that each user gets appropriate access to applications and resources based on their role.
+
+This exercise showcases how to add individual users to Entra ID.
 
 1\. Create a New User
 

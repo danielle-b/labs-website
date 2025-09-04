@@ -1,0 +1,32 @@
+---
+title: "Group Management in Entra ID"
+date: 2025-09-03
+draft: true
+categories: 
+  - "azure"
+  - "iam"
+  - "projects"
+  - "security"
+---
+
+1\. Create a Microsoft 365 Group
+
+![](images/Microsoft365Group.png)
+
+2\. Create a Security Group
+
+![](images/DynamicMembership-1024x292.png)
+
+![](images/SecurityGroup.png)
+
+3\. Add an existing user to the new group
+
+![](images/AddUsertoGroup.png)
+
+4\. Add licenses and owners to a group
+
+![](images/owners.png)
+
+![](images/assign-license-to-group.png)
+
+![](images/license-to-group.png)
