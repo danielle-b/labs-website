@@ -1,7 +1,6 @@
 ---
 title: "Group Management in Entra ID"
-date: 2025-09-03
-draft: true
+date: 2025-07-03
 categories: 
   - "azure"
   - "iam"
