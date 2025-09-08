@@ -8,12 +8,19 @@ categories:
   - "projects"
   - "security"
 ---
+In my last post, I demonstrated how to add a user to Entra ID. However, manually adding users isn't typically best practice because it is time-consuming and results in access inconsistencies. These inconsistencies can lead to data breaches and security gaps. 
+
+Therefore, it is best to create groups first then add users or employees to these groups. This minimizes security risks and reduces overhead. It also ensures that all users or employees within a group have consistent and appropriate permissions. 
 
 1\. Create a Microsoft 365 Group
+
+Microsoft 365 Groups are designed for collaboration. When this kind of group is created, it automatically provisions a suite of resources for its members. Resources include a shared mailbox and calendar in Outlook and a shared workspace in Microsoft Teams. I decided to create a group called "Project 2030".
 
 ![](images/Microsoft365Group.png)
 
 2\. Create a Security Group
+
+Security groups are used for access control and management. They are designed to grant permissions to resources within Microsoft 365. This make managing user access at scale a lot easier. For this example, I named my group "Guest Users".
 
 ![](images/DynamicMembership-1024x292.png)
 
@@ -21,12 +28,18 @@ categories:
 
 3\. Add an existing user to the new group
 
+I decided to add my user Laura Johnson to my Project 2030 group I created earlier. 
+
 ![](images/AddUsertoGroup.png)
 
 4\. Add licenses and owners to a group
+
+I went ahead and made Laura and myself owners of the Project 2030 group. As owners, we can manage group membership and access requests. Then, I added a Visio Plan 2 license to the group. The license gives us access to Microsoft Visio, a diagramming application.
 
 ![](images/owners.png)
 
 ![](images/assign-license-to-group.png)
 
 ![](images/license-to-group.png)
+
+In the real world, I'm sure that this process is automated. A company with thousands of employees could have dozens of groups! With that, I am currently working on a script that automates the creation of these groups using Powershell Graph.
