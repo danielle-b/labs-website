@@ -7,9 +7,9 @@ categories:
   - "projects"
   - "security"
 ---
-In my last post, I demonstrated how to add a user to Entra ID. However, manually adding users isn't typically best practice because it is time-consuming and results in access inconsistencies. These inconsistencies can lead to data breaches and security gaps. 
+In my last post, I demonstrated how to add a user to Entra ID. However, assigning permissions to individual users isn't typically best practice because it is time-consuming and results in access inconsistencies. These inconsistencies can lead to data breaches and security gaps. 
 
-Therefore, it is best to create groups first then add users or employees to these groups. This minimizes security risks and reduces overhead. It also ensures that all users or employees within a group have consistent and appropriate permissions. 
+Therefore, it is best to create groups, assign permissions to the groups, then add users or employees to these groups. This minimizes security risks and reduces overhead. It also ensures that all users or employees within a group have consistent and appropriate permissions. 
 
 1\. Create a Microsoft 365 Group
 
