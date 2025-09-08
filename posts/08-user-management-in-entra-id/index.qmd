@@ -2,6 +2,7 @@
 title: "User Management In Entra ID"
 date: 2025-08-18
 categories: 
+  - "entra id"
   - "azure"
   - "iam"
   - "projects"
